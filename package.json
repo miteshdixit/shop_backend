@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "start": "node index.js",
-    "build": "echo 'No build step required for backend'"
-  },
+"scripts": {
+  "start": "node --trace-warnings index.js",
+  "debug": "NODE_ENV=development node --inspect index.js"
+},
   "engines": {
     "node": "22.x"
   },
