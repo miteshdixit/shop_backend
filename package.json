@@ -7,9 +7,6 @@
     "start": "node index.js",
     "build": "echo 'No build step required for backend'"
   },
-  "engines": {
-    "node": "20.x"
-  },
   "author": "",
   "license": "ISC",
   "description": "",
