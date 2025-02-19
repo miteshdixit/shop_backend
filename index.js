@@ -4,10 +4,10 @@ import logger from "./utils/logger.js";
 
 const PORT = process.env.PORT || 5000;
 
-// Log all environment variables for debugging (Remove this after testing)
-console.log("Environment Variables:", process.env);
+// Log all environment variables (for debugging in Render)
+console.log("🔍 Environment Variables in Render:", process.env);
 
-// Try to connect to the database & start server
+// Database Connection
 DatabaseConnection()
   .then(() => {
     app.listen(PORT, () => {
@@ -16,5 +16,16 @@ DatabaseConnection()
   })
   .catch((err) => {
     console.error("❌ Database connection failed:", err);
-    process.exit(1); // Force Render to show the error
+    process.exit(1); // Force Render to log the real error
   });
+
+// Catch Unhandled Errors (Render might be killing the process)
+process.on("uncaughtException", (err) => {
+  console.error("❌ Uncaught Exception:", err);
+  process.exit(1);
+});
+
+process.on("unhandledRejection", (err) => {
+  console.error("❌ Unhandled Promise Rejection:", err);
+  process.exit(1);
+});
