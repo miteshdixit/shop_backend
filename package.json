@@ -4,19 +4,19 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --trace-warnings index.js",
+    "start": "node index.js",
     "debug": "NODE_ENV=development node --inspect index.js"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "��#\u0000 \u0000s\u0000h\u0000o\u0000p\u0000_\u0000b\u0000a\u0000c\u0000k\u0000e\u0000n\u0000d\u0000\r\u0000 \u0000",
   "dependencies": {
     "axios": "^1.7.7",
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^4.21.1",
+    "express": "^4.21.2",
     "express-rate-limit": "^7.4.1",
     "helmet": "^8.0.0",
     "http-errors": "^2.0.0",
@@ -32,5 +32,14 @@
   "devDependencies": {
     "jest": "^29.7.0",
     "nodemon": "^3.1.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miteshdixit/shop_backend.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/miteshdixit/shop_backend/issues"
+  },
+  "homepage": "https://github.com/miteshdixit/shop_backend#readme"
 }
