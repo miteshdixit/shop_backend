@@ -7,9 +7,6 @@
     "start": "node --trace-warnings index.js",
     "debug": "NODE_ENV=development node --inspect index.js"
   },
-  "engines": {
-    "node": "22.x"
-  },
   "author": "",
   "license": "ISC",
   "description": "",
