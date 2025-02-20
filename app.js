@@ -20,19 +20,18 @@ app.use(helmet());
 // CORS Middleware
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL, "http://localhost:5173"],
+    origin: process.env.FRONTEND_URL || "*",
     credentials: true,
-    // methods: ["GET", "POST", "PUT", "DELETE"],
-    // allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 
-// Setup rate limiter only for API routes
+// rate limiter only for API routes
 const limiter = rateLimit({
-  windowMs: 60 * 1000, // 1 minute
-  max: 100, // Max 100 requests per minute
+  windowMs: 60 * 1000,
+  max: 100,
   message: { error: "Too many requests, please try again later" },
 });
-app.use("/api/v1", limiter, appRouter); // ✅ Rate limiter only applies to API
+app.use("/api/v1", limiter, appRouter);
 
 export default app;
