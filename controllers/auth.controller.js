@@ -92,6 +92,7 @@ export const login = async (req, res) => {
       user,
       message: "Login successful",
     });
+    console.log("Set-Cookie Header:", res.getHeaders()["set-cookie"]);
 
     logger.info(`User logged in: ${user.email}`);
   } catch (err) {
