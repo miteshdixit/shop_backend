@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
-dotenv.config(); // ✅ Load environment variables first
+dotenv.config();
 
-import express from "express";
+// import express from "express";
 import helmet from "helmet";
 import cors from "cors";
 import cookieParser from "cookie-parser";
